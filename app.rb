@@ -1,8 +1,9 @@
 require 'sinatra'
 
 get '/cat' do
+  @random_name = ["Al", "Ishram", "Shelley", "Lucifer"].sample 
   erb(:index)
-end 
+end
 
 get '/index' do
   "index page"
