@@ -1,5 +1,17 @@
-<h1>My name is <%=@random_name%> </h1>
 
-<div style='border: 50px dashed blue'>
+<% if @name %>
+  <h1>My name is <%=@name%> </h1>
+<% end %>
+<div style='border: 5px dashed purple'>
  <img src='http://bit.ly/1eze8aE'>
 </div>
+
+  <form action="/named-cat">
+    <div>
+      <input type="text" name="name">
+      <input type="submit" value="submit">
+    </div>
+
+
+
+  </form>

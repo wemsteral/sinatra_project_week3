@@ -1,18 +1,13 @@
 require 'sinatra'
 
-get '/cat' do
-  @random_name = ["Al", "Ishram", "Shelley", "Lucifer"].sample 
+get '/random-cat' do
+  @random_name = ["Al", "Ishram", "Shelley", "Lucifer"].sample
   erb(:index)
 end
 
-get '/index' do
-  "index page"
-end
-
-get '/home' do
-  "home page"
-end
-
-get '/about' do
-  "about"
+get '/named-cat' do
+  p params
+  @name = params[:name]
+  @color = params[:color]
+  erb(:index)
 end
